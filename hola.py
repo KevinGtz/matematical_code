@@ -19,21 +19,25 @@ print("Hello friend! \n Let's make some matematics! \n The constant would be onl
 	for constant in constants:
 		print(constant)"""
 
-# We declare a variable that the user introduce.
+# We declare a variables that the user introduce.
+# The variables are constants an variable that we use it to derived.
 user_constant = input("Give me a constant to derived: ")
 user_constant = int(user_constant)
 user_variable = input("Give me a varible to derived: ")
 
+# Make a function that recived the constant and the variable.
 def make_derived(constant, varible):
+	# We assert the constant it be an integer and if is not we print and error.
 	if type(constant) == int:
+		# If the constant is an int we multiply it with 0
 		constant = constant * 0
 		print("The derived of your constant is: " + str(constant))
 	else:
-		#print(type(varible))
-		#print(varible)
 		print("That is not a number (if your constant is a letter use '0')")
 
+# We asseert that the varible is x or y or z, if is not we send an error.
 	if varible == 'x' or varible == 'y' or varible == 'z' or varible == 'X' or varible == 'Y' or varible == 'Z':
+		# If the varible is in fact a x or y or z we replace it's value with 1
 		varible = 1
 		print ("The derived of your varible is: " + str(varible))
 	elif varible != 'x' or varible == 'y' or varible == 'z' or varible == 'X' or varible == 'Y' or varible == 'Z':
@@ -41,6 +45,7 @@ def make_derived(constant, varible):
 	else:
 		print('Something is wrong')
 
+# We inicialize the function with user_constant=constant and user_varible=variable.
 make_derived(user_constant, user_variable)
 
 """list_of_elements = user_constant.split()
