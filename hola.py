@@ -20,27 +20,30 @@ print("Hello friend! \n Let's make some matematics! \n The constant would be onl
 		print(constant)"""
 
 # We declare a variable that the user introduce.
-user_input = input("Give me a constant to derived: ")
-user_input = int(user_input)
-user_input1 = input("Give me a varible to derived: ")
+user_constant = input("Give me a constant to derived: ")
+user_constant = int(user_constant)
+user_variable = input("Give me a varible to derived: ")
 
-if type(user_input) == int:
-	user_input = user_input * 0
-	print("The derived of your constant is: " + str(user_input))
-else:
-	#print(type(user_input1))
-	#print(user_input1)
-	print("That is not a number (if your constant is a letter use '0')")
+def make_derived(constant, varible):
+	if type(constant) == int:
+		constant = constant * 0
+		print("The derived of your constant is: " + str(constant))
+	else:
+		#print(type(varible))
+		#print(varible)
+		print("That is not a number (if your constant is a letter use '0')")
 
-if user_input1 == 'x' or user_input1 == 'y' or user_input1 == 'z' or user_input1 == 'X' or user_input1 == 'Y' or user_input1 == 'Z':
-	user_input1 = 1
-	print ("The derived of your varible is: " + str(user_input1))
-elif user_input1 != 'x' or user_input1 == 'y' or user_input1 == 'z' or user_input1 == 'X' or user_input1 == 'Y' or user_input1 == 'Z':
-	print("Error. You use a diferent letter for your varible")
-else:
-	print('Something is wrong')
+	if varible == 'x' or varible == 'y' or varible == 'z' or varible == 'X' or varible == 'Y' or varible == 'Z':
+		varible = 1
+		print ("The derived of your varible is: " + str(varible))
+	elif varible != 'x' or varible == 'y' or varible == 'z' or varible == 'X' or varible == 'Y' or varible == 'Z':
+		print("Error. You use a diferent letter for your varible")
+	else:
+		print('Something is wrong')
 
-"""list_of_elements = user_input.split()
+make_derived(user_constant, user_variable)
+
+"""list_of_elements = user_constant.split()
 
 for element in list_of_elements:
 	print(type(element))
